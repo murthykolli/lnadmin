@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+<!--Admin Home Page Tiles-->
+
+	<definition name="adminHomeTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/admin_home_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="adminHome" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/admin_home.jsp" />
+	</definition>
+	
+	<definition name="adminUserProfile" extends="adminHomeTiles">
+		<put-attribute name="title" value="User Profile" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/admin_user_profile.jsp" />
+	</definition>
+	
+	<definition name="federalTaxAttrModification" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/federalforms/federal_tax_attribute_data_modification.jsp" />
+	</definition>
+	
+	<definition name="sCorpAttrModification" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/federalforms/s_corp_attribute_data_modification.jsp" />
+	</definition>
+	
+	<definition name="fiveZeroOneAttrModification" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/federalforms/501_app_attribute_data_modification.jsp" />
+	</definition>
+	
+	<definition name="stateFormsAttrModification" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/stateform/state_form_attribute_data_modification.jsp" />
+	</definition>
+	
+	<definition name="additionalFormsAttrModification" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/stateform/additional_service_attribute_data_modification.jsp" />
+	</definition>
+	
+	<definition name="stateTaxIdFormsAttrModification" extends="adminHomeTiles">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/view/adminhome/stateform/state_tax_id_attribute_data_modification.jsp" />
+	</definition>	
+	
+
+<!--User Pending Forms Information Tiles-->
+
+	<definition name="pendFormsTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/pending_forms_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="pendingStateForms" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/pending_state_forms.jsp" />
+	</definition>
+	
+	<definition name="pendingFederalForms" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/pending_federal_forms.jsp" />
+	</definition>
+	
+	<definition name="pendingFreeFederalForms" extends="pendFormsTiles">
+		<put-attribute name="title" value="Free Pending Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/pending_free_federal_forms.jsp" />
+	</definition>
+	
+	<!--User Pending State Forms Checkout Display Tiles-->
+	
+	<definition name="pendingStateFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending State Forms Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/checkout_state_form_display.jsp" />
+	</definition>
+	
+	<definition name="pendingAdditionalFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending Additional Forms Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/checkout_additional_service_display.jsp" />
+	</definition>
+	
+	<definition name="pendingStateTaxIdFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending State Tax Id Forms Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/checkout_statetaxid_display.jsp" />
+	</definition>
+	
+	<!--User Pending Federal Forms Checkout Display Tiles-->
+	
+	<definition name="pendingFederalTaxFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending Federal Tax ID Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/federal_checkout_single_federal_form_display.jsp" />
+	</definition>
+	
+	<definition name="pendingSCorpFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending S Corporation Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/federal_checkout_s_corp_form_display.jsp" />
+	</definition>
+	
+	<definition name="pendingFiveZeroOneFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending 501 Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/federal_checkout_501_form_display.jsp" />
+	</definition>
+	
+	<!--User Free Pending Federal Forms Checkout Display Tiles-->
+	
+	<definition name="pendingFreeFederalFormsCheckoutDisplay" extends="pendFormsTiles">
+		<put-attribute name="title" value="Pending Free Federal Tax ID Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/pendingforms/checkout_free_federal_display.jsp" />
+	</definition>
+	
+	
+	<!--User Completed Forms Information Tiles-->
+
+	<definition name="comFormsTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/completed_forms_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="completedStateForms" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_order_receive.jsp" />
+	</definition>
+	
+	<definition name="compStateFormsOrderProcessed" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_order_processed.jsp" />
+	</definition>
+	
+	<definition name="compStateFormsSignature" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_signature.jsp" />
+	</definition>
+	
+	<definition name="compStateFormsDocFiled" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_doc_filed.jsp" />
+	</definition>
+	
+	<definition name="compStateFormsDocAccepted" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_doc_accepted.jsp" />
+	</definition>
+	
+	<definition name="compStateFormsUploadDataSaving" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_file_upload_Data_saving.jsp" />
+	</definition>
+	
+	<definition name="adminStateFormsFileupload" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/admin_state_forms_file_upload_Data_saving.jsp" />
+	</definition>
+	
+	 <!-- Federal Forms -->
+	 
+	<definition name="compStateFormsDocEmailed" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_doc_emailed.jsp" />
+	</definition>
+	
+	<definition name="compStateFormsFileUpload" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed State Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/completed_state_forms_file_upload.jsp" />
+	</definition>
+	
+	<definition name="completedFederalForms" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_order_receive.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsOrderProcessed" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_order_processed.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsSignature" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_signature.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsDocFiled" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_doc_filed.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsDocAccepted" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_doc_accepted.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsDocEmailed" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_doc_emailed.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsFileUpload" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_file_upload.jsp" />
+	</definition>
+	
+	<definition name="compFederalFormsFileUploadDataSaving" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/completed_federal_forms_file_upload_Data_saving.jsp" />
+	</definition>
+	
+	<definition name="adminFederalFormsFileupload" extends="comFormsTiles">
+		<put-attribute name="title" value="Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/admin_federal_forms_file_upload_Data_saving.jsp" />
+	</definition>
+	
+	<definition name="completedFreeFederalForms" extends="comFormsTiles">
+		<put-attribute name="title" value="Free Completed Federal Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/freefederal/completed_free_federal_forms.jsp" />
+	</definition>
+	
+	<definition name="freeFederalCheckoutDisplayCreation" extends="comFormsTiles">
+		<put-attribute name="title" value="Free Federal Forms Checkout Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/freefederal/comp_checkout_free_federaltaxid_form_display.jsp" />
+	</definition>
+	
+	<definition name="freeFederalTaxIdModification" extends="comFormsTiles">
+		<put-attribute name="title" value="Free Federal Forms Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/freefederal/au_free_federaltaxid_form_modification.jsp" />
+	</definition>
+	
+	<definition name="nameAvailabilityCheck" extends="comFormsTiles">
+		<put-attribute name="title" value="Name Availability Check Forms" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/nameavailabilitycheck/name_availability_check.jsp" />
+	</definition>	
+	
+	<definition name="completedStateFormsCheckoutDisplay" extends="comFormsTiles">
+		<put-attribute name="title" value="Checkout State Forms Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/comp_checkout_state_form_display.jsp" />
+	</definition>
+	
+	<definition name="completedAdditionalFormsCheckoutDisplay" extends="comFormsTiles">
+		<put-attribute name="title" value="Checkout Additional Forms Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/comp_checkout_additional_form_display.jsp" />
+	</definition>
+	
+	<definition name="completedStateTaxIdFormsCheckoutDisplay" extends="comFormsTiles">
+		<put-attribute name="title" value="Checkout State Tax Id Forms Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/comp_checkout_statetaxid_form_display.jsp" />
+	</definition>
+	
+	<definition name="newStateFormsCreation" extends="comFormsTiles">
+		<put-attribute name="title" value="State Form Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/au_state_form_modification.jsp" />
+	</definition>
+	
+	<definition name="additionalSerFormModification" extends="comFormsTiles">
+		<put-attribute name="title" value="Additional Form Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/au_additional_sevice_form_modification.jsp" />
+	</definition>
+	
+	<definition name="stateTaxIdFormModification" extends="comFormsTiles">
+		<put-attribute name="title" value="State Tax ID Form Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/stateforms/au_state_tax_id_Form_modification.jsp" />
+	</definition>
+	
+	<definition name="completedFederalTaxFormsCheckoutDisplay" extends="comFormsTiles">
+		<put-attribute name="title" value="Checkout Federal Tax Id Forms Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/comp_checkout_federaltaxid_form_display.jsp" />
+	</definition>
+	
+	<definition name="completedSCorpFormsCheckoutDisplay" extends="comFormsTiles">
+		<put-attribute name="title" value="Checkout S Corp Forms Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/comp_checkout_scorp_form_display.jsp" />
+	</definition>
+	
+	<definition name="completed501FormsCheckoutDisplay" extends="comFormsTiles">
+		<put-attribute name="title" value="Checkout 501 Forms Order Display" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/comp_checkout_501_form_display.jsp" />
+	</definition>
+	
+	<definition name="newFederalFormCreation" extends="comFormsTiles">
+		<put-attribute name="title" value="Federal Tax ID Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/au_federaltaxid_form_modification.jsp" />
+	</definition>
+	
+	<definition name="newSCorpFormCreation" extends="comFormsTiles">
+		<put-attribute name="title" value="S Corporation Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/au_scorp_form_modification.jsp" />
+	</definition>
+	
+	<definition name="newFiveZeroOneFormCreation" extends="comFormsTiles">
+		<put-attribute name="title" value="501 App Modification" />
+		<put-attribute name="body" value="/WEB-INF/view/completedforms/federalforms/au_501_form_modification.jsp" />
+	</definition>
+	
+	<!--User Contact Information Tiles-->
+
+	<definition name="contactInfoTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/contact_info_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="primaryContactInfo" extends="contactInfoTiles">
+		<put-attribute name="title" value="Users Primary Contact Information" />
+		<put-attribute name="body" value="/WEB-INF/view/contactinfo/user_primary_contact_info.jsp" />
+	</definition>
+	
+	<definition name="stateFormsPaymentContact" extends="contactInfoTiles">
+		<put-attribute name="title" value="State Forms Payment Contact Information" />
+		<put-attribute name="body" value="/WEB-INF/view/contactinfo/state_forms_payment_contact_info.jsp" />
+	</definition>
+	
+	<definition name="federalFormsPaymentContact" extends="contactInfoTiles">
+		<put-attribute name="title" value="Federal Forms Payment Contact Information" />
+		<put-attribute name="body" value="/WEB-INF/view/contactinfo/federal_forms_payment_contact_info.jsp" />
+	</definition>
+	
+	<definition name="paymentTransactionContact" extends="contactInfoTiles">
+		<put-attribute name="title" value="User Payment Transaction Contact Information" />
+		<put-attribute name="body" value="/WEB-INF/view/contactinfo/payment_transaction_contact_info.jsp" />
+	</definition>
+		
+	
+	<!--Documents Information Reports Tiles-->
+
+	<definition name="reportsTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/documents_info_reports_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+	
+	<definition name="reportsHomeRedirection" extends="reportsTiles">
+		<put-attribute name="title" value="Reports Home" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/reports_home.jsp" />
+	</definition>
+
+	<definition name="dailyStateReports" extends="reportsTiles">
+		<put-attribute name="title" value="Daily State Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/statereports/daily_state_reports.jsp" />
+	</definition>
+	
+	<definition name="weeklyStateReports" extends="reportsTiles">
+		<put-attribute name="title" value="Weekly State Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/statereports/weekly_state_reports.jsp" />
+	</definition>
+	
+	<definition name="monthlyStateReports" extends="reportsTiles">
+		<put-attribute name="title" value="Monthly State Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/statereports/monthly_state_reports.jsp" />
+	</definition>
+	
+	<definition name="quarterlyStateReports" extends="reportsTiles">
+		<put-attribute name="title" value="Quarterly State Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/statereports/quarterly_state_reports.jsp" />
+	</definition>
+	
+	<definition name="yearlyStateReports" extends="reportsTiles">
+		<put-attribute name="title" value="Yearly State Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/statereports/yearly_state_reports.jsp" />
+	</definition>
+	
+	<definition name="dailyFederalReports" extends="reportsTiles">
+		<put-attribute name="title" value="Daily Federal Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/federalreports/daily_federal_reports.jsp" />
+	</definition>
+	
+	<definition name="weeklyFederalReports" extends="reportsTiles">
+		<put-attribute name="title" value="Weekly Federal Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/federalreports/weekly_federal_reports.jsp" />
+	</definition>
+	
+	<definition name="monthlyFederalReports" extends="reportsTiles">
+		<put-attribute name="title" value="Monthly Federal Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/federalreports/monthly_federal_reports.jsp" />
+	</definition>
+	
+	<definition name="quarterlyFederalReports" extends="reportsTiles">
+		<put-attribute name="title" value="Quarterly Federal Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/federalreports/quarterly_federal_reports.jsp" />
+	</definition>
+	
+	<definition name="yearlyFederalReports" extends="reportsTiles">
+		<put-attribute name="title" value="Yearly Federal Reports" />
+		<put-attribute name="body" value="/WEB-INF/view/reports/federalreports/yearly_federal_reports.jsp" />
+	</definition>
+	
+	<!--Sub Admin Tiles-->
+
+	<definition name="subAdminTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/sub_admin_home_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="subAdminInfo" extends="subAdminTiles">
+		<put-attribute name="title" value="Sub Admin Registration" />
+		<put-attribute name="body" value="/WEB-INF/view/subadmin/sub_admin_registration.jsp" />
+	</definition>
+	
+	<!--Sub Admin After Login Tiles-->
+
+	<definition name="subAdminTiles" template="/WEB-INF/view/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/view/layouts/sub_admin_after_login_header.jsp" />		
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="subAdminActiveUsers" extends="subAdminTiles">
+		<put-attribute name="title" value="Sub Admin Active Users" />
+		<put-attribute name="body" value="/WEB-INF/view/subadmin/sub_admin_active_users.jsp" />
+	</definition>
+	
+	<definition name="subAdminInactiveUsers" extends="subAdminTiles">
+		<put-attribute name="title" value="Sub Admin Inactive Users" />
+		<put-attribute name="body" value="/WEB-INF/view/subadmin/sub_admin_inactive_users.jsp" />
+	</definition>
+	
+	
+	
+		
+
+</tiles-definitions>
